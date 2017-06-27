@@ -8,20 +8,20 @@ sysctl = {}
 case os[:family]
 when "freebsd", "openbsd"
   sysctl = {
-    "net.inet.ip.forwarding" => 1,
-    "kern.maxfiles" => 20_000
+    "net.inet.ip.forwarding" => "1",
+    "kern.maxfiles" => "20000"
   }
 when "redhat"
   sysctl_conf = "/etc/sysctl.d/99-sysctl.conf"
   sysctl = {
-    "net.ipv4.tcp_tw_reuse" => 1,
-    "net.ipv4.tcp_syncookies" => 0
+    "net.ipv4.tcp_tw_reuse" => "1",
+    "net.ipv4.tcp_syncookies" => "0"
   }
 when "ubuntu"
   sysctl_conf = "/etc/sysctl.conf"
   sysctl = {
-    "net.ipv4.tcp_tw_reuse" => 1,
-    "net.ipv4.tcp_syncookies" => 0
+    "net.ipv4.tcp_tw_reuse" => "1",
+    "net.ipv4.tcp_syncookies" => "0"
   }
 end
 puts os[:family]
