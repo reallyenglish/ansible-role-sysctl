@@ -10,7 +10,7 @@ None
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `sysctl_conf` | path to `sysctl.conf(5)` | `{{ __sysctl\_conf }}` |
+| `sysctl_conf` | path to `sysctl.conf(5)` | `{{ __sysctl_conf }}` |
 | `sysctl_bin` | path to `sysctl(8)` | `{{ __sysctl_bin }}` |
 | `sysctl` | dict contains sysctl key as key, sysctl value as value | `{}` |
 
